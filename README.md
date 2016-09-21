@@ -1,7 +1,7 @@
 # Elecciones Gubernamentales 2016
 
 
-![Shapefile Estado.](shapeEstado.png)
+![Shapefile Zacatecas.](shapeZac.png)
 ```R
 library(shiny)
 runGitHub("elec_gob", "ivanps", subdir = "shape_voto_region")
