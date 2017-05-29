@@ -7,7 +7,7 @@ Para visualizar el voto ciudadano usando un shapefile como el que se muestra eje
 ![Shapefile Zacatecas.](shapeZac.png)
 ```R
 library(shiny)
-runGitHub("elec_gob", "ivanps", subdir = "shape_voto_region")
+runGitHub("Mapas_Electorales", "ivanps", subdir = "shape_voto")
 ```
 
 ## Voto por región usando ggmap
@@ -17,7 +17,7 @@ Para visualizar el voto ciudadano usando ggmap como el que se muestra ejecuta lo
 ![ggmap Zacatecas.](ggmapZac.png)
 ```R
 library(shiny)
-runGitHub("elec_gob", "ivanps", subdir = "ggmap_voto_region")
+runGitHub("Mapas_Electorales", "ivanps", subdir = "ggmap_voto")
 ```
 
 ## Voto por partido
@@ -27,5 +27,5 @@ Para visualizar el voto ciudadano usando un shapefile como el que se muestra eje
 ![ggmap Partidos.](ggmapPartidos.png)
 ```R
 library(shiny)
-runGitHub("elec_gob", "ivanps", subdir = "ggmap_partidos")
+runGitHub("Mapas_Electorales", "ivanps", subdir = "ggmap_partidos")
 ```
