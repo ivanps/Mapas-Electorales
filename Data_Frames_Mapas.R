@@ -166,7 +166,6 @@ secciones$partido <- factor(secciones$partido, levels = 1:7,
       labels = c("PAN-PRD", "PRI-PVEM-PANAL", "PT", "MORENA", "PES", "C.IND", "NR"))
 
 # Agrega distrito federal y municipio
-dbine <- merge(dbine, select(seccs_data, id, dtofed, muni), by = "id")
 dfelec <- merge(dfelec, data.frame(id = seccs_data$id, dtofed = seccs_data$dtofed, 
                                    muni = seccs_data$muni), by = "id")
 
@@ -175,4 +174,3 @@ dfelec <- merge(dfelec, data.frame(id = seccs_data$id, dtofed = seccs_data$dtofe
 #****************************************
 save(secciones, file = "secciones.RData")
 save(dfelec, file = "dfelec.RData")
-save(dbine, file = "dbine.RData")
