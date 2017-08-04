@@ -6,10 +6,10 @@ library(dplyr)
 load("data/secciones.RData")
 
 #--------------------------------------------------------------
+# Colores PAN-PRD, PRI-PVEM-PANAL, PT, PES, MORENA, C.IND y NR.
+colores <-c("#FFFF00", "#339900", "#FF0033", "#660099", "#990000", "#999999", "#FFFFFF")
 # Función que genera mapa
 mapaElectoral <- function(region, magnif) {
-  # Colores PAN-PRD, PRI-PVEM-PANAL, PT, MORENA y PES
-  colores <-c("#FFFF00", "#339900", "#FF0033","#990000", "#660099", "#999999")
   # Obtiene mapa estatico de Google
   region_map <- get_map(location = c(mean(region$long), mean(region$lat)), zoom = magnif, maptype = "roadmap")
   # Grafica el mapa con el shapefile

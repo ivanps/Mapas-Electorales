@@ -18,12 +18,14 @@ mapaElectoral <- function(region = "Estado", id.region = "", relecc = dfelec,
         Municipio = filter(secciones, id_muni == id.region),
         Localidad = filter(secciones, id_loc == id.region))
   
+  # Colores PAN-PRD, PRI-PVEM-PANAL, PT, PES, MORENA, C.IND y NR.
+  colores <-c("#FFFF00", "#339900", "#FF0033", "#660099", "#990000", "#999999", "#FFFFFF")
   # Construye mapa temático
   ggplot(data=mapsecc, aes(map_id=id)) + 
     geom_map(map=mapsecc, fill="white", size=0.2) +
     expand_limits(x = mapsecc$long, y = mapsecc$lat) +
     geom_map(data=relecc, map=mapsecc, aes(fill=partido), size=0.2) +
-    scale_fill_manual(values=c("#E6E600", "#339900", "#FF0033", "#990000", "#660099")) +
+    scale_fill_manual(values=colores) +
     coord_equal() + xlab("Longitud") + ylab("Latitud")
 }
 
